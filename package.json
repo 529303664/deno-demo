@@ -9,7 +9,8 @@
     "cat": " deno run --allow-run ./cat.ts README.md",
     "worker": "deno run -A --unstable --watch ./worker/main.ts",
     "chat": "deno run --reload --allow-net --allow-read https://deno.land/std/examples/chat/server.ts",
-    "unittest": "deno test ./unittest.ts"
+    "unittest": "deno test ./unittest.ts",
+    "doc": "deno doc doc.ts"
   },
   "repository": {
     "type": "git",
