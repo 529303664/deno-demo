@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "deno_land/std/": "https://deno.land/std/"
+  }
+}
