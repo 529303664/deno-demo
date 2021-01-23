@@ -1,7 +1,12 @@
 // import { serve } from "https://deno.land/std/http/server.ts";
 import { serve } from "deno_land/std/http/server.ts";
-const s = serve({ port: 9010 });
-console.log("http://localhost:9010/");
-for await (const req of s) {
-  req.respond({ body: "Hello World\n" });
+
+const server = serve({ hostname: "0.0.0.0", port: 8080 });
+console.log(`HTTP webserver running.  Access it at:  http://localhost:8080/`);
+
+for await (const request of server) {
+  let bodyContent = "Your user-agent is:\n\n";
+  bodyContent += request.headers.get("user-agent") || "Unknown";
+
+  request.respond({ status: 200, body: bodyContent });
 }
