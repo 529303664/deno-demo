@@ -5,7 +5,7 @@
   "main": "test-server.js",
   "scripts": {
     "chat": "deno run --reload --allow-net --allow-read https://deno.land/std/examples/chat/server.ts",
-    "worker": "deno run -A --unstable ./worker/main.ts",
+    "worker": "deno run -A --unstable --watch ./worker/main.ts",
     "test-server": "deno run --unstable --watch --allow-net ./test-server.js"
   },
   "repository": {
